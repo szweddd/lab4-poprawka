@@ -36,3 +36,11 @@ elif [[ "$1" == "--init" ]]; then
   echo "export PATH=\$PATH:$(pwd)/cloned_repo" >> ~/.bashrc
   source ~/.bashrc
 fi
+
+elif [[ "$1" == "--error" || "$1" == "-e" ]]; then
+  count=${2:-100}
+  mkdir -p errorX
+  for ((i=1; i<=count; i++)); do
+    echo "Error file $i" > "errorX/error$i.txt"
+  done
+fi

@@ -44,3 +44,5 @@ elif [[ "$1" == "--error" || "$1" == "-e" ]]; then
     echo "Error file $i" > "errorX/error$i.txt"
   done
 fi
+
+errorX/
